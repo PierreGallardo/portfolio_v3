@@ -326,50 +326,74 @@
 </style>
 
       <!-- === PAGE PROJETS === -->
-      <section id="page-projets" class="page hidden max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4 mb-8">Mes Réalisations</h2>
+<section id="page-projets" class="page hidden max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4 mb-8">Mes Réalisations</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Projet 1 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
-                <div class="h-40 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-white">
-                    <span class="text-5xl font-bold"></span>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-bold mb-2">Gestion Salariés - OptiStats</h3>
-                    <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">
-                        Application intranet pour la gestion administrative des salariés.
-                    </p>
-                    <div class="flex gap-2 mb-4 flex-wrap">
-                        <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">PHP</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">SQL</span>
-                    </div>
-                    <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
-                </div>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
+            <div class="h-40 overflow-hidden relative">
+                <img src="./images/optistats.png" 
+                     alt="Capture d'écran OptiStats" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
-
-             <!-- Projet 2 -->
-
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
-                <div class="h-40 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-white">
-                    <span class="text-5xl font-bold"></span>
+            
+            <div class="p-6">
+                <h3 class="text-lg font-bold mb-2">Gestion Salariés - OptiStats</h3>
+                <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">
+                    Application intranet pour la gestion administrative des salariés.
+                </p>
+                <div class="flex gap-2 mb-4 flex-wrap">
+                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">PHP</span>
+                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">SQL</span>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-bold mb-2">Jeu Casino - Casino Royal SIO</h3>
-                    <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">
-                        Application Desktop permettant de jouer à un casino fictif.
-                    </p>
-                    <div class="flex gap-2 mb-4 flex-wrap">
-                        <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">HTML</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">JavaScript</span>
-                        <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">Electron.js</span>
-                    </div>
-                    <a href="https://github.com/PierreGallardo/projet-casino-electron.git" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
-                </div>
+                <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
             </div>
-
         </div>
-      </section>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
+            <div class="h-40 overflow-hidden relative">
+                <img src="./images/casino-electron.png" 
+                     alt="Jeu Casino SIO" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+
+            <div class="p-6">
+                <h3 class="text-lg font-bold mb-2">Jeu Casino - Casino Royal SIO</h3>
+                <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">
+                    Application Desktop permettant de jouer à un casino fictif.
+                </p>
+                <div class="flex gap-2 mb-4 flex-wrap">
+                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">HTML</span>
+                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">JavaScript</span>
+                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">Electron.js</span>
+                </div>
+                <a href="https://github.com/PierreGallardo/projet-casino-electron.git" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
+            <div class="h-40 overflow-hidden relative">
+                <img src="./images/gestion-sanction.png" 
+                     alt="Capture d'écran Gestion Sanctions" 
+                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            </div>
+            
+            <div class="p-6">
+                <h3 class="text-lg font-bold mb-2">Gestion Sanctions - Projet BTS</h3>
+                <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">
+                    Site Web de gestion de sanctions des élèves d'un lycée.
+                </p>
+                <div class="flex gap-2 mb-4 flex-wrap">
+                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">PHP</span>
+                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">SQL</span>
+                </div>
+                <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 <!-- === PAGE CERTIFICATIONS / MOOCS === -->
       <section id="page-certifs" class="page hidden max-w-6xl mx-auto fade-in">
