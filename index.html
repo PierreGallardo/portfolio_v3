@@ -5,476 +5,403 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Gallardo Pierre</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; }
-    .fade-in { animation: fadeIn 0.4s ease-in-out; }
+    .fade-in { animation: fadeIn 0.4s ease-out; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    
-    /* Assure un défilement fluide sur mobile */
     .overflow-y-auto { -webkit-overflow-scrolling: touch; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
 
   <div class="flex flex-col md:flex-row h-[100dvh] overflow-hidden">
 
-    <aside class="w-full md:w-64 bg-white border-r border-slate-200 z-20 flex-shrink-0 md:flex flex-col justify-between hidden shadow-xl">
+    <!-- SIDEBAR -->
+    <aside class="w-full md:w-72 bg-white border-r border-slate-200 z-20 flex-shrink-0 md:flex flex-col justify-between hidden shadow-sm">
       <div class="p-8 text-center">
-        <div class="w-24 h-24 mx-auto bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-lg mb-4">
+        <!-- Carré PG Droit -->
+        <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold shadow-lg shadow-blue-100 mb-6">
           PG
         </div>
-        <h1 class="text-xl font-bold text-slate-900">Pierre Gallardo</h1>
-        <p class="text-sm text-blue-600 font-semibold bg-blue-50 inline-block px-3 py-1 rounded-full mt-2">BTS SIO SLAM</p>
+        <h1 class="text-xl font-bold text-slate-900 tracking-tight">Pierre Gallardo</h1>
+        <p class="text-[11px] uppercase tracking-widest text-blue-600 font-bold bg-blue-50 inline-block px-3 py-1 rounded-full mt-2">BTS SIO SLAM</p>
       </div>
 
       <nav class="flex-1 px-4 space-y-1 overflow-y-auto">
-        <button onclick="router('home')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 transition text-slate-600 font-medium flex items-center gap-3">
+        <button onclick="router('home')" class="nav-btn w-full text-left px-4 py-3 rounded-xl transition text-slate-600 font-medium flex items-center gap-3 hover:bg-slate-50">
             <span>🏠</span> Accueil
         </button>
-        <button onclick="router('cv')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 transition text-slate-600 font-medium flex items-center gap-3">
+        <button onclick="router('cv')" class="nav-btn w-full text-left px-4 py-3 rounded-xl transition text-slate-600 font-medium flex items-center gap-3 hover:bg-slate-50">
             <span>🎓</span> CV & Formation
         </button>
-        <button onclick="router('experiences')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 transition text-slate-600 font-medium flex items-center gap-3">
+        <button onclick="router('experiences')" class="nav-btn w-full text-left px-4 py-3 rounded-xl transition text-slate-600 font-medium flex items-center gap-3 hover:bg-slate-50">
             <span>💼</span> Expériences
         </button>
-        <button onclick="router('projets')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 transition text-slate-600 font-medium flex items-center gap-3">
+        <button onclick="router('projets')" class="nav-btn w-full text-left px-4 py-3 rounded-xl transition text-slate-600 font-medium flex items-center gap-3 hover:bg-slate-50">
             <span>💻</span> Projets
         </button>
-        <button onclick="router('veille')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 transition text-slate-600 font-medium flex items-center gap-3">
+        <button onclick="router('veille')" class="nav-btn w-full text-left px-4 py-3 rounded-xl transition text-slate-600 font-medium flex items-center gap-3 hover:bg-slate-50">
             <span>📡</span> Veille Techno
         </button>
-        <button onclick="router('certifs')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 transition text-slate-600 font-medium flex items-center gap-3">
+        <button onclick="router('certifs')" class="nav-btn w-full text-left px-4 py-3 rounded-xl transition text-slate-600 font-medium flex items-center gap-3 hover:bg-slate-50">
             <span>🏅</span> Moocs / Certifs
         </button>
-        <button onclick="router('passions')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 transition text-slate-600 font-medium flex items-center gap-3">
+        <button onclick="router('passions')" class="nav-btn w-full text-left px-4 py-3 rounded-xl transition text-slate-600 font-medium flex items-center gap-3 hover:bg-slate-50">
             <span>⚽</span> Passions
         </button>
-        <button onclick="router('contact')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-slate-50 transition text-slate-600 font-medium flex items-center gap-3">
+        <button onclick="router('contact')" class="nav-btn w-full text-left px-4 py-3 rounded-xl transition text-slate-600 font-medium flex items-center gap-3 hover:bg-slate-50">
             <span>📬</span> Me contacter
         </button>
       </nav>
 
-      <div class="p-6 text-center border-t text-xs text-gray-400">
+      <div class="p-6 text-center border-t text-[10px] text-slate-400 uppercase tracking-widest">
         &copy; 2026 P.Gallardo
       </div>
     </aside>
 
-    <div class="md:hidden bg-white p-4 shadow-md flex justify-between items-center z-30 relative">
+    <!-- MOBILE NAV -->
+    <div class="md:hidden bg-white p-4 shadow-sm flex justify-between items-center z-30 relative">
         <span class="font-bold text-blue-600">Pierre Gallardo</span>
-        <button id="mobile-menu-btn" class="text-slate-600 p-2 border rounded">☰ Menu</button>
+        <button id="mobile-menu-btn" class="text-slate-600 p-2 border rounded-xl bg-slate-50">☰ Menu</button>
     </div>
     
     <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-50 flex flex-col p-8 space-y-2 overflow-y-auto">
-        <button onclick="router('home'); toggleMobile()" class="text-lg p-3 border-b text-left">🏠 Accueil</button>
-        <button onclick="router('cv'); toggleMobile()" class="text-lg p-3 border-b text-left">🎓 CV & Formation</button>
-        <button onclick="router('experiences'); toggleMobile()" class="text-lg p-3 border-b text-left">💼 Expériences</button>
-        <button onclick="router('projets'); toggleMobile()" class="text-lg p-3 border-b text-left">💻 Projets</button>
-        <button onclick="router('veille'); toggleMobile()" class="text-lg p-3 border-b text-left">📡 Veille</button>
-        <button onclick="router('certifs'); toggleMobile()" class="text-lg p-3 border-b text-left">🏅 Certifications</button>
-        <button onclick="router('passions'); toggleMobile()" class="text-lg p-3 border-b text-left">⚽ Passions</button>
-        <button onclick="router('contact'); toggleMobile()" class="text-lg p-3 border-b text-left text-slate-700">📬 Me contacter</button>
-        <button onclick="toggleMobile()" class="mt-8 text-red-500 font-bold p-3 text-center bg-red-50 rounded">Fermer</button>
+        <button onclick="router('home'); toggleMobile()" class="text-lg p-4 border-b text-left">🏠 Accueil</button>
+        <button onclick="router('cv'); toggleMobile()" class="text-lg p-4 border-b text-left">🎓 CV & Formation</button>
+        <button onclick="router('experiences'); toggleMobile()" class="text-lg p-4 border-b text-left">💼 Expériences</button>
+        <button onclick="router('projets'); toggleMobile()" class="text-lg p-4 border-b text-left">💻 Projets</button>
+        <button onclick="router('veille'); toggleMobile()" class="text-lg p-4 border-b text-left">📡 Veille</button>
+        <button onclick="router('certifs'); toggleMobile()" class="text-lg p-4 border-b text-left">🏅 Certifications</button>
+        <button onclick="router('passions'); toggleMobile()" class="text-lg p-4 border-b text-left">⚽ Passions</button>
+        <button onclick="router('contact'); toggleMobile()" class="text-lg p-4 border-b text-left text-blue-600">📬 Me contacter</button>
+        <button onclick="toggleMobile()" class="mt-8 text-red-500 font-bold p-4 text-center bg-red-50 rounded-xl">Fermer</button>
     </div>
 
-    <main id="main-content" class="flex-1 overflow-y-auto p-4 md:p-12 relative">
+    <main id="main-content" class="flex-1 overflow-y-auto p-6 md:p-16 relative">
       
+      <!-- ACCUEIL -->
       <section id="page-home" class="page max-w-4xl mx-auto flex flex-col items-center justify-center min-h-[80vh] text-center fade-in">
-        <span class="text-blue-600 font-bold tracking-widest uppercase text-sm mb-4">Portfolio BTS SIO</span>
-        <h2 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">Pierre Gallardo</h2>
-        <p class="text-xl text-slate-600 max-w-2xl leading-relaxed">
+        <span class="text-blue-600 font-bold tracking-[0.2em] uppercase text-[10px] mb-4 bg-blue-50 px-4 py-1 rounded-full">Portfolio BTS SIO</span>
+        <h2 class="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tighter leading-tight">Pierre <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Gallardo</span></h2>
+        <p class="text-xl text-slate-500 max-w-2xl leading-relaxed">
           Étudiant en BTS SIO option SLAM 2ème année.
         </p>
-        <div class="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          <button onclick="router('projets')" class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 shadow-lg transition transform hover:-translate-y-1">Voir mes projets</button>
-          <a target='_blank' href="./pdf/CV_PIERRE_GALLARDO.pdf" class="px-8 py-3 bg-white border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition transform hover:-translate-y-1 block text-center">Télécharger CV</a>
+        <div class="mt-12 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <button onclick="router('projets')" class="px-10 py-4 bg-slate-900 text-white rounded-2xl hover:bg-blue-600 shadow-xl shadow-slate-200 transition-all font-semibold transform hover:-translate-y-1">Voir mes projets</button>
+          <a target='_blank' href="./pdf/CV_PIERRE_GALLARDO.pdf" class="px-10 py-4 bg-white border border-slate-200 text-slate-700 rounded-2xl hover:bg-slate-50 transition-all font-semibold block text-center shadow-sm">Télécharger CV</a>
         </div>
       </section>
 
-      <section id="page-cv" class="page hidden max-w-4xl mx-auto space-y-12">
+      <!-- CV & COMPETENCES -->
+      <section id="page-cv" class="page hidden max-w-5xl mx-auto space-y-16">
         <div>
-          <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4 mb-8">Mes Compétences</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-white p-6 rounded-xl shadow-sm">
-                <h3 class="font-bold text-lg mb-4 text-blue-600">Développement</h3>
-                <ul class="list-disc ml-5 space-y-2 text-slate-700">
+          <h2 class="text-3xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-6 mb-10">Mes Compétences</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                <h3 class="font-bold text-xl mb-6 text-blue-600">Développement</h3>
+                <ul class="list-disc ml-5 space-y-3 text-slate-700 font-medium">
                     <li>Programmation : <strong>JavaScript, PHP, Python</strong></li>
                     <li>Web : <strong>HTML5, CSS (Tailwind), JS</strong></li>
                     <li>Base de données : <strong>SQL (MySQL, Postgre)</strong></li>
                 </ul>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm">
-                <h3 class="font-bold text-lg mb-4 text-green-600">Outils bureautique</h3>
-                <ul class="list-disc ml-5 space-y-2 text-slate-700">
+            <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                <h3 class="font-bold text-xl mb-6 text-indigo-600">Outils & Méthodes</h3>
+                <ul class="list-disc ml-5 space-y-3 text-slate-700 font-medium">
                     <li>Versionning : <strong>Git / GitHub</strong></li>
                     <li>Outils : Google Drive, Office, Adobe</li>
                     <li>Cybersécurité (ANSSI, Bonnes pratiques)</li>
-                    <li>Scrum (Notions)</li>
-                    <li>Méthode Agile</li>
+                    <li>Scrum / Méthode Agile</li>
                 </ul>
             </div>
           </div>
         </div>
 
         <div>
-            <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4 mb-8">Ma Formation</h2>
-            <div class="bg-blue-50 border border-blue-200 p-6 rounded-xl shadow-sm mb-6 relative">
-               <span class="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">En cours</span>
-               <h3 class="text-xl font-bold text-blue-800 mb-2 pr-12">BTS SIO (Option SLAM)</h3>
-               <p class="font-semibold text-slate-700">Lycée Louis Pergaud</p>
-               <ul class="list-disc ml-5 space-y-2 mt-4 text-slate-700">
-                   <li>Services Informatiques aux Organisations.</li>
-                   <li>Option <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).</li>
-                   <li>Projets Web, Gestion de projet.</li>
-               </ul>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm mb-4">
-               <h3 class="text-xl font-bold text-slate-900 mb-1">Licence Info (L2)</h3>
-               <p class="text-slate-600">UFR ST Besançon (2020-2024)</p>
-               <p class="text-sm text-slate-500 mt-2">Acquisition des bases algorithmiques et mathématiques.</p>
-            </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm">
-               <h3 class="text-xl font-bold text-slate-900 mb-1">Bac Scientifique (SI)</h3>
-               <p class="text-slate-600">Lycée Louis Pergaud (2020)</p>
-               <p class="text-sm text-slate-500 mt-2">Option Sciences de l'Ingénieur.</p>
+            <h2 class="text-3xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-6 mb-10">Ma Formation</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border-l-8 border-blue-600 relative overflow-hidden">
+                    <span class="absolute top-6 right-8 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">En cours</span>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-1">BTS SIO (Option SLAM)</h3>
+                    <p class="font-bold text-blue-600 mb-4">Lycée Louis Pergaud</p>
+                    <ul class="list-disc ml-5 space-y-2 text-slate-600 text-sm">
+                        <li>Services Informatiques aux Organisations.</li>
+                        <li>Option <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).</li>
+                        <li>Projets Web, Gestion de projet.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                   <h3 class="text-xl font-bold text-slate-900 mb-1">Licence Info (L2)</h3>
+                   <p class="text-slate-500 text-sm mb-2 uppercase tracking-wider">UFR ST Besançon (2020-2024)</p>
+                   <p class="text-sm text-slate-600 leading-relaxed">Acquisition des bases algorithmiques et mathématiques.</p>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100">
+                   <h3 class="text-xl font-bold text-slate-900 mb-1">Bac Scientifique (SI)</h3>
+                   <p class="text-slate-500 text-sm mb-2 uppercase tracking-wider">Lycée Louis Pergaud (2020)</p>
+                   <p class="text-sm text-slate-600">Option Sciences de l'Ingénieur.</p>
+                </div>
             </div>
         </div>
       </section>
 
-      <section id="page-experiences" class="page hidden max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4 mb-8">Mes Expériences</h2>
-        <div class="space-y-6">
-             <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-gray-200 hover:border-blue-500 transition">
-               <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2 gap-2">
-                    <h3 class="text-xl font-bold text-slate-900">Stage Informatique</h3>
-                    <span class="text-sm text-blue-600 font-bold uppercase bg-blue-50 px-2 py-1 rounded w-fit">Mai - Juin 2025</span>
+      <!-- EXPERIENCES -->
+      <section id="page-experiences" class="page hidden max-w-5xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-6 mb-10">Mes Expériences</h2>
+        <div class="space-y-8">
+             <!-- STAGE MMICRO (NOUVEAU) -->
+             <div class="bg-white p-8 rounded-[2rem] shadow-sm border-l-8 border-indigo-600 hover:shadow-xl transition-all duration-300">
+                <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-6 gap-4">
+                     <div>
+                         <h3 class="text-2xl font-bold text-slate-900">Stagiaire Informatique & Développeur IA</h3>
+                         <p class="text-indigo-600 font-bold text-lg mt-1 tracking-tight">MMICRO (Étalans)</p>
+                     </div>
+                     <span class="text-xs text-indigo-700 font-black uppercase bg-indigo-50 px-4 py-2 rounded-xl border border-indigo-100 h-fit">Févr. - Avr. 2026</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 border-t pt-6">
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-3 uppercase text-[10px] tracking-widest">Support & Technique</h4>
+                        <ul class="text-slate-600 text-sm space-y-2">
+                            <li>• Technicien N1 : Installation et réparation de postes informatiques.</li>
+                            <li>• Maintenance matérielle et logicielle du parc client.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-indigo-700 mb-3 uppercase text-[10px] tracking-widest">Intelligence Artificielle</h4>
+                        <ul class="text-slate-600 text-sm space-y-2 font-medium">
+                            <li>• Mise en place d'un agent autonome IA (ZeroClaw).</li>
+                            <li>• Travail en Python avec OpenClaw, ZeroClaw et OmniRoute.</li>
+                        </ul>
+                    </div>
+                </div>
+             </div>
+
+             <!-- STAGE HDR (ORIGINAL) -->
+             <div class="bg-white p-8 rounded-[2rem] shadow-sm border-l-8 border-blue-500 hover:shadow-xl transition-all duration-300">
+               <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-4 gap-2">
+                    <h3 class="text-2xl font-bold text-slate-900">Stage Informatique</h3>
+                    <span class="text-xs text-blue-600 font-black uppercase bg-blue-50 px-4 py-2 rounded-xl border border-blue-100">Mai - Juin 2025</span>
                </div>
-               <p class="text-lg text-slate-700 font-medium mb-2">Haut Doubs Repassage</p>
-               <p class="text-slate-600">Développement d’une application Web PHP/MySQL pour la gestion des données des salariés.</p>
-               <ul class="list-disc ml-5 mt-3 text-slate-600 text-sm space-y-1">
+               <p class="text-lg text-slate-700 font-bold mb-2">Haut Doubs Repassage</p>
+               <p class="text-slate-600 text-sm leading-relaxed">Développement d’une application Web PHP/MySQL pour la gestion des données des salariés.</p>
+               <ul class="list-disc ml-5 mt-4 text-slate-600 text-sm space-y-1">
                    <li>Recueil des besoins utilisateurs.</li>
                    <li>Conception de la base de données.</li>
                    <li>Support utilisateur et rédaction de la documentation technique.</li>
                </ul>
              </div>
-             <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-gray-200">
+
+             <!-- BURGER KING (ORIGINAL) -->
+             <div class="bg-white p-8 rounded-[2rem] shadow-sm border-l-8 border-slate-200 transition">
                 <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2 gap-2">
                     <h3 class="text-xl font-bold text-slate-900">Équipier Polyvalent</h3>
-                    <span class="text-sm text-gray-500 font-bold uppercase w-fit">Depuis 2022</span>
+                    <span class="text-xs text-slate-400 font-black uppercase">Depuis 2022</span>
                </div>
-                <p class="text-lg text-slate-700 font-medium mb-2">Burger King</p>
-                <p class="text-slate-600 mb-2">Travail étudiant en parallèle des cours.</p>
-                <ul class="list-disc ml-5 mt-1 text-slate-600 text-sm space-y-1">
-                   <li>Travail d'équipe dans un environnement rythmé.</li>
-                   <li>Rigueur, ponctualité et respect des procédures d'hygiène.</li>
-                </ul>
+                <p class="text-slate-700 font-bold mb-2">Burger King</p>
+                <p class="text-slate-600 text-sm leading-relaxed">Travail étudiant en parallèle des cours. Esprit d'équipe, rigueur et ponctualité.</p>
               </div>
           </div>
       </section>
 
-<section id="page-veille" class="page hidden max-w-5xl mx-auto">
-    <div class="flex flex-col md:flex-row gap-8 items-start mb-10">
-        <div class="flex-1">
-            <h2 class="text-3xl font-bold mb-4">Ma Veille Technologique</h2>
-            <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-blue-500 mb-4">
-                <h4 class="font-bold text-slate-800 mb-1">🔍 Contexte du sujet</h4>
-                <p class="text-sm text-slate-600 text-justify leading-relaxed">
-                    L'IA générative révolutionne le développement logiciel. Elle ne se contente plus de suggérer du code, elle est capable de générer des fonctions entières, de documenter et de refactoriser. Cette veille explore comment ces outils transforment nos méthodes de travail tout en soulevant des défis majeurs en matière de sécurité, de confidentialité et de propriété intellectuelle.
-                </p>
-            </div>
-            <p class="text-slate-500 italic text-sm">Sujet principal suivi durant le BTS</p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500 w-full md:w-1/3 text-center shrink-0">
-            <span class="text-sm text-gray-400 uppercase font-bold">Thème</span>
-            <h3 class="text-xl font-bold text-blue-700 mt-1">L'IA générative dans le dev</h3>
-            <p class="text-xs text-gray-500 mt-2">Impact sur le métier de développeur & outils (Copilot, ChatGPT, Gemini)</p>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div class="bg-white p-6 rounded-xl shadow-sm">
-            <h3 class="font-bold text-lg mb-4 flex items-center gap-2">🛠️ Mes Outils de veille</h3>
-            <div class="flex gap-4 justify-around">
-               <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-xl group-hover:bg-green-200 transition">F</div>
-                    <span class="text-xs mt-1">Feedly</span>
-               </div>
-               <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-xl group-hover:bg-blue-200 transition">iR</div>
-                    <span class="text-xs mt-1">InoReader</span>
-               </div>
-               <div class="flex flex-col items-center group cursor-pointer">
-                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-xl group-hover:bg-red-200 transition">gA</div>
-                    <span class="text-xs mt-1">Google Alerts</span>
-               </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-2 gap-2">
-        <h3 class="font-bold text-xl">Flux d'Actualités (RSS)</h3>
-        <span class="text-xs text-gray-400 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> En direct de lemondeinformatique.fr</span>
-    </div>
-    <div id="rss-feed-container" class="space-y-4">
-        <div class="animate-pulse flex space-x-4 bg-white p-5 rounded-lg border border-gray-100">
-            <div class="flex-1 space-y-4 py-1">
-                <div class="h-4 bg-slate-200 rounded w-3/4"></div>
-                <div class="space-y-2">
-                    <div class="h-4 bg-slate-200 rounded"></div>
-                    <div class="h-4 bg-slate-200 rounded w-5/6"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="page-projets" class="page hidden max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4 mb-8">Mes Réalisations</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
-            <div class="h-40 overflow-hidden relative">
-                <img src="./images/optistats.png" alt="Capture d'écran OptiStats" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            </div>
-            <div class="p-6">
-                <h3 class="text-lg font-bold mb-2">Gestion Salariés - OptiStats</h3>
-                <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">Application intranet pour la gestion administrative des salariés.</p>
-                <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">PHP</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">SQL</span>
-                </div>
-                <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
-            <div class="h-40 overflow-hidden relative">
-                <img src="./images/casino-electron.png" alt="Jeu Casino SIO" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            </div>
-            <div class="p-6">
-                <h3 class="text-lg font-bold mb-2">Jeu Casino - Casino Royal SIO</h3>
-                <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">Application Desktop permettant de jouer à un casino fictif.</p>
-                <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">HTML</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">JavaScript</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">Electron.js</span>
-                </div>
-                <a href="https://github.com/PierreGallardo/projet-casino-electron.git" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
-            <div class="h-40 overflow-hidden relative">
-                <img src="./images/gestion-sanction.png" alt="Capture d'écran Gestion Sanctions" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            </div>
-            <div class="p-6">
-                <h3 class="text-lg font-bold mb-2">Gestion Sanctions - Projet BTS</h3>
-                <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">Site Web de gestion de sanctions des élèves d'un lycée.</p>
-                <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">PHP</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">SQL</span>
-                </div>
-                <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
-            <div class="h-40 overflow-hidden relative">
-                <img src="./images/portfolio.png" alt="Portfolio" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            </div>
-            <div class="p-6">
-                <h3 class="text-lg font-bold mb-2">Portfolio</h3>
-                <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">Portfolio personnel avec toutes les compétences acquises durant les études.</p>
-                <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">HTML</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">TailWind</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">JavaScript</span>
-                </div>
-                <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
-            <div class="h-40 overflow-hidden relative">
-                <img src="./images/salle109.png" alt="Installation baies" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            </div>
-            <div class="p-6">
-                <h3 class="text-lg font-bold mb-2">Installation baies - Projet Réseau</h3>
-                <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">Projet de transformation d'une salle de classe pour une salle avec des postes et baies serveurs.</p>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
-            <div class="h-40 overflow-hidden relative">
-                <img src="https://placehold.co/600x400/darkblue/png?text=Site+Vitrine\nInnov%27IT" alt="Site Vitrine" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            </div>
-            <div class="p-6">
-                <h3 class="text-lg font-bold mb-2">Site Vitrine - Innov'IT</h3>
-                <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">Site vitrine d'un revendeur Apple réalisé dans le cadre de la 1ère année du BTS.</p>
-                <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">HTML</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">TailWind</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">PHP</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">SQL</span>
-                </div>
-                <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
-            <div class="h-40 overflow-hidden relative">
-                <img src="https://placehold.co/600x400/darkblue/png?text=Site+Vitrine\nInnov%27IT" alt="Site Vitrine" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-            </div>
-            <div class="p-6">
-                <h3 class="text-lg font-bold mb-2">Site Vitrine - Innov'IT</h3>
-                <p class="text-slate-600 text-xs mb-4 h-12 overflow-hidden">Site vitrine d'un revendeur Apple réalisé dans le cadre de la 1ère année du BTS.</p>
-                <div class="flex gap-2 mb-4 flex-wrap">
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">HTML</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">TailWind</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">PHP</span>
-                    <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs rounded border">SQL</span>
-                </div>
-                <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-2 bg-slate-50 text-slate-700 text-sm font-medium rounded hover:bg-slate-100">Voir détails</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="page-certifs" class="page hidden max-w-6xl mx-auto fade-in">
-    <h2 class="text-3xl font-bold border-l-4 border-blue-600 pl-4 mb-8">Mes Certifications & MOOCs</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-200 transition duration-300 flex flex-col">
-            <div class="flex justify-between items-start mb-4">
-                <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded uppercase">ANSSI</span>
-                <div class="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-xl">🛡️</div>
-            </div>
-            <h3 class="font-bold text-lg text-slate-800 mb-2">SecNumAcadémie</h3>
-            <p class="text-sm text-slate-500 mb-4 flex-grow">Certification officielle de l'ANSSI sur la sécurité des systèmes d'information.</p>
-            <div class="border-t border-slate-100 pt-4 mt-auto">
-                <ul class="text-xs text-slate-600 space-y-1 mb-3">
-                    <li>• Authentification & Mots de passe</li>
-                    <li>• Sécurité sur Internet</li>
-                    <li>• Sécurité du poste de travail</li>
-                </ul>
-                <span class="block text-center text-green-600 text-xs font-bold bg-green-50 py-2 rounded">✅ Validé en 2024</span>
-                <a target="_blank" href="./pdf/mooc anssi.pdf" class="mt-4 text-sm block text-center font-bold bg-blue-100 py-2 rounded hover:bg-blue-200 transition">Voir la certification</a>
-            </div>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-blue-200 transition duration-300 flex flex-col">
-            <div class="flex justify-between items-start mb-4">
-                <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded uppercase">CNIL</span>
-                <div class="w-10 h-10 bg-indigo-50 rounded-full flex items-center justify-center text-xl">⚖️</div>
-            </div>
-            <h3 class="font-bold text-lg text-slate-800 mb-2">Atelier RGPD</h3>
-            <p class="text-sm text-slate-500 mb-4 flex-grow">Sensibilisation à la protection des données personnelles et respect de la vie privée.</p>
-            <div class="border-t border-slate-100 pt-4 mt-auto">
-                <ul class="text-xs text-slate-600 space-y-1 mb-3">
-                    <li>• Droits des utilisateurs</li>
-                    <li>• Responsabilités du développeur</li>
-                    <li>• Collecte de données</li>
-                </ul>
-                <span class="block text-center text-green-600 text-xs font-bold bg-green-50 py-2 rounded">✅ Validé en 2024</span>
-                <a target="_blank" href="./pdf/mooc cnil.pdf" class="mt-4 text-sm block text-center font-bold bg-blue-100 py-2 rounded hover:bg-blue-200 transition">Voir la certification</a>
-            </div>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg hover:border-gray-200 transition duration-300 flex flex-col">
-            <div class="flex justify-between items-start mb-4">
-                <span class="bg-gray-100 text-gray-700 text-xs font-bold px-2 py-1 rounded uppercase">PIX</span>
-                <div class="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-xl">🎯</div>
-            </div>
-            <h3 class="font-bold text-lg text-slate-800 mb-2">Certification Numérique</h3>
-            <p class="text-sm text-slate-500 mb-4 flex-grow">Évaluation et certification des compétences numériques transversales.</p>
-            <div class="border-t border-slate-100 pt-4 mt-auto">
-                <div class="flex justify-between items-center mb-3">
-                    <span class="text-xs text-slate-600">Score global</span>
-                    <span class="font-bold text-blue-600">511 pix</span>
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-2.5">
-                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 29%"></div>
-                </div>
-                <span class="block text-center text-gray-500 text-xs mt-3">Niveau Indépendant 2</span>
-                <a target="_blank" href="./pdf/certification-pix-20260204.pdf" class="mt-4 text-sm block text-center font-bold bg-blue-100 py-2 rounded hover:bg-blue-200 transition">Voir la certification</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="page-passions" class="page hidden max-w-4xl mx-auto text-center fade-in">
-    <h2 class="text-3xl font-bold mb-12">Centre d'intérêts</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-            <div class="text-6xl mb-4 grayscale hover:grayscale-0 transition duration-300">⚽</div>
-            <h3 class="text-xl font-bold">Football</h3>
-            <p class="text-gray-500 mt-2 text-sm">Pratique en club depuis 10 ans. Esprit d'équipe.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-            <div class="text-6xl mb-4 grayscale hover:grayscale-0 transition duration-300">🤿</div>
-            <h3 class="text-xl font-bold">Plongée Nautique</h3>
-            <p class="text-gray-500 mt-2 text-sm">Pratique de la plongée nautique avec certificat de 12m.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-            <div class="text-6xl mb-4 grayscale hover:grayscale-0 transition duration-300">⛷️</div>
-            <h3 class="text-xl font-bold">Ski Alpin</h3>
-            <p class="text-gray-500 mt-2 text-sm">Pratique du ski alpin dans différentes stations.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-            <div class="text-6xl mb-4 grayscale hover:grayscale-0 transition duration-300">🎥</div>
-            <h3 class="text-xl font-bold">Cinéma</h3>
-            <p class="text-gray-500 mt-2 text-sm">Culture cinématographique.</p>
-        </div>
-    </div>
-</section>
-
-<section id="page-contact" class="page hidden max-w-5xl mx-auto fade-in pb-10">
-    <h2 class="text-2xl md:text-3xl font-bold border-l-4 border-blue-600 pl-4 mb-8">Me Contacter</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-        
-        <div class="space-y-6">
-            <p class="text-slate-600 leading-relaxed">
-                Voici mes coordonnées pour me contacter :
-            </p>
-
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4 hover:border-blue-300 transition">
-                <div class="bg-blue-50 w-12 h-12 rounded-full flex items-center justify-center text-xl">📧</div>
-                <div>
-                    <h3 class="font-bold text-slate-800">Email</h3>
-                    <a href="mailto:pierre.gallardo25580@gmail.com" class="text-blue-600 text-sm hover:underline">pierre.gallardo25580@gmail.com</a>
+      <!-- PROJETS -->
+      <section id="page-projets" class="page hidden max-w-6xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-6 mb-10">Mes Réalisations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- ZERO CLAW (NOUVEAU) -->
+            <div class="bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+                <div class="h-48 bg-gradient-to-br from-indigo-600 to-indigo-900 flex items-center justify-center text-6xl">🤖</div>
+                <div class="p-8">
+                    <h3 class="text-xl font-black text-slate-900 mb-3">ZeroClaw - Agent IA</h3>
+                    <p class="text-slate-500 text-xs mb-6 h-12 leading-relaxed">Plateforme d'agents IA autonomes propulsée par ZeroClaw et Claude (Anthropic), orchestrée via Docker.</p>
+                    <div class="flex gap-2 flex-wrap mb-6">
+                        <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded">PYTHON</span>
+                        <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-bold rounded">AI AGENT</span>
+                    </div>
+                    <button class="w-full py-3 bg-indigo-600 text-white text-xs font-bold rounded-xl hover:bg-indigo-700 transition">Projet innovant</button>
                 </div>
             </div>
 
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4 hover:border-blue-300 transition">
-                <div class="bg-blue-50 w-12 h-12 rounded-full flex items-center justify-center text-xl">💼</div>
-                <div>
-                    <h3 class="font-bold text-slate-800">LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/pierre-gallardo-11389a349/" target="_blank" class="text-blue-600 text-sm hover:underline">https://www.linkedin.com/in/pierre-gallardo-11389a349/</a>
+            <!-- OPTISTATS -->
+            <div class="bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition group">
+                <div class="h-40 overflow-hidden relative"><img src="./images/optistats.png" alt="OptiStats" class="w-full h-full object-cover"></div>
+                <div class="p-8">
+                    <h3 class="text-xl font-black text-slate-900 mb-2">Gestion Salariés - OptiStats</h3>
+                    <p class="text-slate-500 text-xs mb-6 h-10">Application intranet pour la gestion administrative des salariés.</p>
+                    <div class="flex gap-2 mb-6"><span class="px-2 py-1 bg-slate-50 text-[10px] font-bold rounded">PHP</span><span class="px-2 py-1 bg-slate-50 text-[10px] font-bold rounded">SQL</span></div>
+                    <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-3 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl">Voir détails</a>
                 </div>
             </div>
 
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4 hover:border-blue-300 transition">
-                <div class="bg-blue-50 w-12 h-12 rounded-full flex items-center justify-center text-xl">🐱</div>
-                <div>
-                    <h3 class="font-bold text-slate-800">GitHub</h3>
-                    <a href="https://github.com/PierreGallardo" target="_blank" class="text-blue-600 text-sm hover:underline">github.com/PierreGallardo</a>
+            <!-- CASINO -->
+            <div class="bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition group">
+                <div class="h-40 overflow-hidden relative"><img src="./images/casino-electron.png" alt="Casino" class="w-full h-full object-cover"></div>
+                <div class="p-8">
+                    <h3 class="text-xl font-black text-slate-900 mb-2">Casino Royal SIO</h3>
+                    <p class="text-slate-500 text-xs mb-6 h-10">Application Desktop permettant de jouer à un casino fictif.</p>
+                    <div class="flex gap-2 mb-6"><span class="px-2 py-1 bg-slate-50 text-[10px] font-bold rounded">JS</span><span class="px-2 py-1 bg-slate-50 text-[10px] font-bold rounded">ELECTRON</span></div>
+                    <a href="https://github.com/PierreGallardo/projet-casino-electron.git" class="block text-center w-full py-3 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl">Détails GitHub</a>
                 </div>
             </div>
 
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center gap-4">
-                <div class="bg-blue-50 w-12 h-12 rounded-full flex items-center justify-center text-xl">📍</div>
-                <div>
-                    <h3 class="font-bold text-slate-800">Localisation</h3>
-                    <span class="text-slate-600 text-sm">Besançon (25), France</span>
+            <!-- SANCTIONS -->
+            <div class="bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition group">
+                <div class="h-40 overflow-hidden relative"><img src="./images/gestion-sanction.png" alt="Sanctions" class="w-full h-full object-cover"></div>
+                <div class="p-8">
+                    <h3 class="text-xl font-black text-slate-900 mb-2">Gestion Sanctions</h3>
+                    <p class="text-slate-500 text-xs mb-6 h-10">Site Web de gestion de sanctions des élèves d'un lycée.</p>
+                    <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-3 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl">Détails</a>
+                </div>
+            </div>
+
+            <!-- PORTFOLIO -->
+            <div class="bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition group">
+                <div class="h-40 overflow-hidden relative"><img src="./images/portfolio.png" alt="Portfolio" class="w-full h-full object-cover"></div>
+                <div class="p-8">
+                    <h3 class="text-xl font-black text-slate-900 mb-2">Mon Portfolio</h3>
+                    <p class="text-slate-500 text-xs mb-6 h-10">Ce site personnel présentant mes compétences acquises.</p>
+                    <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-3 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl">Détails</a>
+                </div>
+            </div>
+
+            <!-- RESEAU -->
+            <div class="bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition group">
+                <div class="h-40 overflow-hidden relative"><img src="./images/salle109.png" alt="Réseau" class="w-full h-full object-cover"></div>
+                <div class="p-8">
+                    <h3 class="text-xl font-black text-slate-900 mb-2">Projet Réseau</h3>
+                    <p class="text-slate-500 text-xs mb-6 h-10">Installation de postes et baies serveurs en salle 109.</p>
+                </div>
+            </div>
+
+            <!-- INNOV'IT -->
+            <div class="bg-white rounded-[2rem] shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition group">
+                <div class="h-40 bg-slate-900 flex items-center justify-center text-white font-black text-center p-4">Site Vitrine Innov'IT</div>
+                <div class="p-8">
+                    <h3 class="text-xl font-black text-slate-900 mb-2">Innov'IT</h3>
+                    <p class="text-slate-500 text-xs mb-6 h-10">Site vitrine d'un revendeur Apple (1ère année).</p>
+                    <a target="_blank" href="./pdf/Plateforme Salarié (1).pdf" class="block text-center w-full py-3 bg-slate-100 text-slate-700 text-xs font-bold rounded-xl">Détails</a>
                 </div>
             </div>
         </div>
+      </section>
 
-    </div>
-</section>
+      <!-- VEILLE TECHNOLOGIQUE -->
+      <section id="page-veille" class="page hidden max-w-5xl mx-auto space-y-10">
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
+            <h2 class="text-4xl font-black text-slate-900 mb-8">Ma Veille Technologique</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 space-y-6">
+                    <div class="bg-blue-50 p-6 rounded-3xl border-l-4 border-blue-600">
+                        <h4 class="font-bold text-blue-900 mb-2 uppercase text-xs tracking-widest">Sujet Principal</h4>
+                        <p class="text-slate-700 text-sm leading-relaxed text-justify">
+                            L'évolution de l'IA générative vers les <strong>agents autonomes</strong>. Ma veille explore comment des outils comme <strong>OpenClaw</strong> et <strong>ZeroClaw</strong> transforment nos méthodes de travail, tout en étudiant l'impact sur le métier de développeur et les défis de sécurité.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-slate-50 p-4 rounded-2xl border"><p class="text-[10px] font-black">FEEDLY</p></div>
+                        <div class="bg-slate-50 p-4 rounded-2xl border"><p class="text-[10px] font-black">INOREADER</p></div>
+                        <div class="bg-slate-50 p-4 rounded-2xl border"><p class="text-[10px] font-black">ALERTS</p></div>
+                    </div>
+                </div>
+                <div class="bg-slate-900 p-8 rounded-[2rem] text-white flex flex-col justify-center">
+                    <h4 class="text-indigo-400 font-black text-xs uppercase tracking-widest mb-2">Thème</h4>
+                    <p class="text-lg font-bold">L'IA générative dans le dev</p>
+                    <p class="text-slate-400 text-xs mt-4 italic">Impact, outils (Copilot, ChatGPT) et orchestration d'agents.</p>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <h3 class="font-black text-xl flex items-center gap-2 px-2"><span>📡</span> Flux RSS en direct</h3>
+            <div id="rss-feed-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section id="page-certifs" class="page hidden max-w-6xl mx-auto">
+          <h2 class="text-3xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-6 mb-10">Mes Certifications & MOOCs</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:border-blue-500 transition-all text-center group">
+                <div class="text-4xl mb-4 group-hover:scale-110 transition">🛡️</div>
+                <h3 class="font-bold text-slate-900 mb-2">SecNumAcadémie</h3>
+                <p class="text-slate-500 text-xs mb-6 italic">Certification officielle de l'ANSSI sur la cybersécurité.</p>
+                <a target="_blank" href="./pdf/mooc anssi.pdf" class="block w-full py-3 bg-blue-50 text-blue-600 text-[10px] font-black rounded-xl uppercase tracking-widest">Voir Diplôme</a>
+              </div>
+              <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:border-indigo-500 transition-all text-center group">
+                <div class="text-4xl mb-4 group-hover:scale-110 transition">⚖️</div>
+                <h3 class="font-bold text-slate-900 mb-2">Atelier RGPD</h3>
+                <p class="text-slate-500 text-xs mb-6 italic">Sensibilisation CNIL à la protection des données.</p>
+                <a target="_blank" href="./pdf/mooc cnil.pdf" class="block w-full py-3 bg-indigo-50 text-indigo-600 text-[10px] font-black rounded-xl uppercase tracking-widest">Voir Diplôme</a>
+              </div>
+              <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:border-slate-900 transition-all text-center group">
+                <div class="text-4xl mb-4 group-hover:scale-110 transition">🎯</div>
+                <h3 class="font-bold text-slate-900 mb-2">Certification PIX</h3>
+                <p class="text-slate-500 text-xs mb-6 italic font-bold">Score : 511 pix</p>
+                <a target="_blank" href="./pdf/certification-pix-20260204.pdf" class="block w-full py-3 bg-slate-900 text-white text-[10px] font-black rounded-xl uppercase tracking-widest">Voir Certificat</a>
+              </div>
+          </div>
+      </section>
+
+      <!-- PASSIONS -->
+      <section id="page-passions" class="page hidden max-w-4xl mx-auto text-center fade-in">
+          <h2 class="text-3xl font-black text-slate-900 mb-12 uppercase tracking-tighter">Centre d'intérêts</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all group">
+                  <div class="text-5xl mb-4 grayscale group-hover:grayscale-0 transition duration-500">⚽</div>
+                  <h3 class="font-bold text-slate-900">Football</h3>
+                  <p class="text-[10px] text-slate-400 mt-2">Pratique club 10 ans</p>
+              </div>
+              <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all group">
+                  <div class="text-5xl mb-4 grayscale group-hover:grayscale-0 transition duration-500">🤿</div>
+                  <h3 class="font-bold text-slate-900">Plongée</h3>
+                  <p class="text-[10px] text-slate-400 mt-2">Certificat 12m</p>
+              </div>
+              <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all group">
+                  <div class="text-5xl mb-4 grayscale group-hover:grayscale-0 transition duration-500">⛷️</div>
+                  <h3 class="font-bold text-slate-900">Ski Alpin</h3>
+                  <p class="text-[10px] text-slate-400 mt-2">Sports d'hiver</p>
+              </div>
+              <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all group">
+                  <div class="text-5xl mb-4 grayscale group-hover:grayscale-0 transition duration-500">🎥</div>
+                  <h3 class="font-bold text-slate-900">Cinéma</h3>
+                  <p class="text-[10px] text-slate-400 mt-2">Culture ciné</p>
+              </div>
+          </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="page-contact" class="page hidden max-w-5xl mx-auto pb-10">
+          <h2 class="text-3xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-6 mb-12">Me Contacter</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a href="mailto:pierre.gallardo25580@gmail.com" class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-blue-500 transition-all text-center">
+                  <div class="text-3xl mb-4">📧</div>
+                  <h4 class="font-bold">Email</h4>
+                  <p class="text-[10px] text-blue-600 mt-2 break-all font-bold">pierre.gallardo25580@gmail.com</p>
+              </a>
+              <a href="https://www.linkedin.com/in/pierre-gallardo-11389a349/" target="_blank" class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-blue-700 transition-all text-center">
+                <div class="text-3xl mb-4">💼</div>
+                <h4 class="font-bold">LinkedIn</h4>
+                <p class="text-[10px] text-blue-700 mt-2 font-bold tracking-widest uppercase">Profil Pro</p>
+              </a>
+              <a href="https://github.com/PierreGallardo" target="_blank" class="bg-white p-8 rounded-3xl border border-slate-100 hover:border-slate-900 transition-all text-center">
+                <div class="text-3xl mb-4">🐱</div>
+                <h4 class="font-bold">GitHub</h4>
+                <p class="text-[10px] text-slate-500 mt-2 font-bold tracking-widest uppercase">@PierreGallardo</p>
+              </a>
+          </div>
+          <div class="mt-8 bg-white p-8 rounded-3xl border border-slate-100 flex items-center gap-4 max-w-md mx-auto">
+             <div class="text-2xl">📍</div>
+             <div class="text-sm">Besançon (25), France</div>
+          </div>
+      </section>
 
     </main>
   </div>
 
+  <script src="index.js"></script>
   <script>
+    // RSS Logic
     document.addEventListener('DOMContentLoaded', () => {
         const RSS_URL = 'https://www.lemondeinformatique.fr/flux-rss/theme/intelligence-artificielle/rss.xml';
         const API_ENDPOINT = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`;
@@ -485,47 +412,20 @@
             .then(data => {
                 if(data.status === 'ok') {
                     container.innerHTML = '';
-                    data.items.slice(0, 3).forEach(item => {
-                        const articleDate = new Date(item.pubDate).toLocaleDateString('fr-FR');
+                    data.items.slice(0, 4).forEach(item => {
                         const articleHTML = `
-                        <div class="bg-white p-5 rounded-lg border border-gray-100 hover:border-blue-300 hover:shadow-md transition duration-300">
-                            <div class="flex flex-wrap justify-between items-start mb-1 gap-2">
-                                <span class="text-[10px] md:text-xs text-gray-400 flex items-center gap-1">
-                                    📅 ${articleDate} • Source : ${data.feed.title}
-                                </span>
-                            </div>
-                            <h4 class="font-bold text-lg text-slate-800 hover:text-blue-700 transition leading-snug">
-                                <a href="${item.link}" target="_blank">${item.title}</a>
+                        <div class="bg-white p-6 rounded-3xl border border-slate-100 hover:border-blue-300 transition-all shadow-sm">
+                            <h4 class="font-bold text-sm text-slate-800 leading-snug">
+                                <a href="${item.link}" target="_blank" class="hover:text-blue-600 transition">${item.title}</a>
                             </h4>
-                            <p class="text-sm text-slate-600 mt-2 line-clamp-2">
-                                ${item.description.replace(/<[^>]*>?/gm, '').substring(0, 160)}...
-                            </p>
-                            <a href="${item.link}" target="_blank" class="text-blue-600 text-xs font-bold mt-3 inline-block hover:underline">
-                                Lire l'article complet →
-                            </a>
+                            <p class="text-[10px] text-slate-400 mt-3 font-black uppercase italic">📅 ${new Date(item.pubDate).toLocaleDateString('fr-FR')}</p>
                         </div>
                         `;
                         container.innerHTML += articleHTML;
                     });
-                } else {
-                    container.innerHTML = '<p class="text-red-500">Impossible de charger le flux RSS.</p>';
                 }
-            })
-            .catch(error => {
-                console.error('Erreur RSS:', error);
-                container.innerHTML = '<p class="text-red-500">Erreur de connexion au flux de veille.</p>';
             });
     });
   </script>
-
-  <style>
-    .line-clamp-2 {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-  </style>
-  <script src="index.js"></script>
 </body>
 </html>
